@@ -2,8 +2,8 @@
     --bg-main: #272b30;
     --bg-hover: #09c;
     --bg-nav: rgb(58, 73, 123);
-    --font-main: cursive;
-    --font-heading: cursive;
+    --font-main: "Roboto Slab", serif;
+    --font-heading:"Merienda", cursive;
   }
   
   body {

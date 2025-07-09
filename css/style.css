@@ -1,0 +1,224 @@
+:root {
+    --bg-main: #272b30;
+    --bg-hover: #09c;
+    --bg-nav: rgb(58, 73, 123);
+    --font-main: cursive;
+    --font-heading: cursive;
+  }
+  
+  body {
+    background-color: var(--bg-main);
+    font-family: var(--font-main);
+    color: #fff !important;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text) !important;
+  }
+  
+  .active {
+    color: var(--bg-hover) !important;
+  }
+  
+  .text-main {
+    color: var(--bg-hover) !important;
+  }
+  
+  /** ============= Header ==========  */
+  header img {
+    height: 30vh;
+    object-fit: cover;
+  }
+  #row-content > div:nth-child(n) > div > div > div.header.d-flex.justify-content-between.align-items-center > h3{
+      font-size: 1.25rem;
+    }
+  #row-content > div:nth-child(n) > div > div > div.body.mt-2 > p{
+    font-size: .9375rem;
+  }
+  
+  /*! ============= Navbar ==========  */
+  nav .logo-image {
+    width: 2.5rem;
+  }
+  
+  nav h6 {
+    font-size: 1.25rem !important;
+    font-weight: 500;
+  }
+  
+  nav {
+    background-color: rgb(58, 73, 123) !important;
+    margin-top: -1.875rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 .625rem rgb(0 0 0 / 0.7);
+  }
+  
+  .nav-item .nav-link.active,
+  .nav-item .nav-link:hover {
+    color: #09c !important;
+    transition: color 0.5s;
+  }
+  
+  .nav-item .nav-link {
+    font-size: .75rem;
+  }
+  
+  
+  /*? Games content   */
+  #content-games .inner {
+    border-radius: 1.25rem;
+    border: .0625rem solid rgba(0, 0, 0, 0.175);
+    border-radius: .375rem;
+    filter: grayscale(0.7);
+    transition: transform 0.5s, filter 0.5s 0.1s;
+  }
+  
+  #content-games .inner:hover {
+    transform: scale(1.03);
+    filter: grayscale(0);
+  }
+  
+  #content-games #game-name {
+    font-size: .875rem;
+  }
+  
+  #content-games #game-status {
+    padding: .5rem;
+    border-radius: .375rem;
+    background-color: var(--bg-nav);
+    font-size: .75rem;
+  }
+  
+  #content-games .footer {
+    border-top: .0625rem solid rgba(0, 0, 0, 0.175);
+    margin-inline: -0.9375rem;
+  }
+  
+  #content-games #game-description {
+    font-size: .75rem;
+    font-weight: 400;
+  }
+  
+  #content-games .footer div {
+    font-size: .625rem;
+    padding: .3125rem;
+    background-color: #32383E;
+    border-radius: .5rem;
+    font-weight: 700;
+  
+  }
+  
+  /*& spinner  */
+  .loader {
+    transform: rotateZ(45deg);
+    perspective: 62.5rem;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+    .loader:before,
+    .loader:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin linear infinite;
+    }
+    .loader:after {
+      color: var(--bg-hover);
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+    }
+  
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotateccw {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+  
+  @keyframes spin {
+    0%,
+    100% {
+      box-shadow: .2em 0rem 0 0rem currentcolor;
+    }
+    12% {
+      box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+      box-shadow: 0 .2em 0 0rem currentcolor;
+    }
+    37% {
+      box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+      box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+      box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+      box-shadow: 0rem -.2em 0 0 currentcolor;
+    }
+    87% {
+      box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+  }
+  
+  .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  
+  #details{
+    background-color: var(--bg-main);
+  }
+  
+  .fa-solid.fa-xmark{
+    cursor: pointer;
+  }
+  
+  #row-content .inner{
+    cursor: pointer;
+  }
+  
+  .box-color{
+    padding: .5rem;
+    background-color: var(--bg-hover);
+    border-radius: .375rem;
+    color: #000;
+    font-size: .75rem;
+    font-weight: 700;
+  }
